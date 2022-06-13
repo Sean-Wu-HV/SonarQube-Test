@@ -1,6 +1,7 @@
-package payroll;
-import java.util.Objects;
+package com.example.payroll;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,9 +12,9 @@ class Employee {
     private @Id @GeneratedValue Long id;
     private String name;
     private String role;
-
+    @Autowired
     Employee() {}
-
+    @Autowired
     Employee(String name, String role) {
 
         this.name = name;
